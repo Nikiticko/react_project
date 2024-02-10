@@ -1,55 +1,117 @@
 import React from 'react';
 
 function App() {
-	return <div>
-    <div>
-      <p className='Jonny'>Один из самых легендарных персонажей Найт-Сити. Лидер бунтарской группы «Самурай», 
-        фанатичный противник корпораций, вспыльчивый и упрямый нонконформист — в общем, 
-        рокер до мозга костей. Джонни эффектно ушёл в 2023 году и не менее эффектно 
-        вернулся в 2077, застряв в голове у Ви.</p>
-      <p className='Judy'>Занимаясь монтажом виртуальных фильмов, Джуди совершила настоящую техническую 
-        революцию и вошла в число лучших брейнданс-инженеров всего Найт-Сити. Ей удалось 
-        выжать максимум из существующих приёмов, смешать их и добавить туда щепотку других 
-        видов искусства. При этом она всегда стремилась не только развлекать людей, но и 
-        поддерживать их. Поэтому она помогает «Шельмам», банде проституток из борделей Найт-Сити, а затем и Ви.</p>
-      <p className='Panam'>Панам — кочевница из Альдекальдо, семьи свободолюбивых бродяг, которые удочерили её ещё в детстве. Она ушла 
-        из клана, чтобы стать наёмницей и пробиться в мир корпораций, который Альдекальдо всегда презирали. Однако в 
-        ней до сих пор жива любовь к свободе, и она по-прежнему привязана к своей большой семье.</p>
-    </div>
-    <div>
-      <div>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-        </ul>
-      </div>
-    </div>
-    <div>
-      <input />
-    </div>
-  </div>;
+  const str1 = 'text1'
+  const str2 = 'text2'
+  const name = 'user'
+  const age = '18'
+  const arr = [1, 2, 3, 4, 5]
+  const obj = {name: 'John', surname: 'Smit'}
+  const attr = 'block'
+  const str3 = <p>youuuu</p>
+  const li1 = <li>text1</li>
+	const li2 = <li>text2</li>
+	const li3 = <li>text3</li>
+  const items = (<>
+    <li>text1</li>
+    <li>text2</li>
+    <li>text3</li>
+  </>)
+  return <>
+  {
+    //  12
+  }
+  <div>
+    <input /><input /><input />
+  </div>
+  {
+    //  13
+  }
+  <div>
+    <p>{str1}</p>
+    <p>{str2}</p>
+  </div>
+  {
+    //  14
+  }
+  <div>
+    name: {name} <br />
+    age: {age}
+  </div>
+  {
+    //  15
+  }
+  <div>
+    <ul>
+      <li>{arr[0]}</li>
+      <li>{arr[1]}</li>
+      <li>{arr[2]}</li>
+      <li>{arr[3]}</li>
+      <li>{arr[4]}</li>
+    </ul>
+  </div>
+  {
+    //  16
+  }
+  <div>
+    <p>
+      name: <span> {obj.name} </span> <br />
+      surname: <span> {obj.surname} </span>
+    </p>
+  </div>
+  {
+    //  17
+  }
+  <div id={attr}>
+    text
+  </div>
+  {
+    //  18
+  }
+  <div>
+    {str3}
+  </div>
+  {
+    //  19
+  }
+  <div>
+    <ul>
+      {li1}
+      {li2}
+      {li3}
+    </ul>
+  </div>
+  {
+    //  20
+  }
+  <div>
+    <ul>
+      {items}
+    </ul>
+  </div>
+  {
+    //  21
+  }
+  <div>
+  {
+    //Константы с тегами можно возвращать через return:
+    //function App() {
+    //	const str = <main>
+    //		text
+    //	</main>;
+    //	
+    //	return str;
+    //}
+  }
+  </div>
+  {
+    //  22
+  }
+  <div>
+    <input /> <br />
+    <input /> <br />
+    <input />
+  </div>
+  </>
 }
-
-export default App;
+export default App; 
