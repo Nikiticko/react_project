@@ -1,117 +1,145 @@
 import React from 'react';
 
 function App() {
-  const str1 = 'text1'
-  const str2 = 'text2'
-  const name = 'user'
-  const age = '18'
-  const arr = [1, 2, 3, 4, 5]
-  const obj = {name: 'John', surname: 'Smit'}
-  const attr = 'block'
-  const str3 = <p>youuuu</p>
-  const li1 = <li>text1</li>
-	const li2 = <li>text2</li>
-	const li3 = <li>text3</li>
-  const items = (<>
-    <li>text1</li>
-    <li>text2</li>
-    <li>text3</li>
-  </>)
+    const num1 = 3;
+    const num2 = 2;
+    
+    const name = 'John';
+    const surname = 'Smit';
+    
+    const num = 4;
+    
+    let text1;
+    const show = true;
+    if (show){
+      text1 = <p>text1</p>;
+    } else{
+      text1 = <p>text2</p>;
+    }
+    
+    const isAdult = true;
+    let age;
+    if (isAdult){
+      age = <p>уже есть 18</p>
+    } else{
+      age = <p>ещё нет 18</p>
+    }
+
+    let p;
+    const isAdmin = true;
+    if (isAdmin){
+      p = <div>
+        <p>это строка админа!!!!!!!!!!!!!!!</p>
+        <p>это строка админа!!!!!!!!!!!!!!!</p>
+        <p>это строка админа!!!!!!!!!!!!!!!</p>
+        <p>это строка админа!!!!!!!!!!!!!!!</p>
+      </div>
+    }
+  
+    const age1 = 15;
+    let abc;
+    if (age1 >= 18){
+      abc = <a href='http://rt.pornhub.com'>Ссылочка</a>;
+    }else {
+      abc = <p>Без ссылочки сегодня</p>;
+    }
+    const isAuth = true;
+    const isAuth1 = false;
+    
+    function getDigitSum (number) {
+      var figures = "" + number
+      var sum = 0
+      for (var i = 0; i < figures.length; i++) 
+        sum += +figures[i]
+      return sum
+    }
+    const sum = getDigitSum(123);
+
+    function getDigitSum1 (number) {
+      var figures = "" + number
+      var sum = 0
+      for (var i = 0; i < figures.length; i++) 
+        sum += +figures[i]
+      return sum
+    }
+
+    function act1(){
+      alert('Вы нажали на первую кнопку')
+    }
+    function act2(){
+      alert('Вы нажали на вторую кнопку')
+    }
   return <>
-  {
-    //  12
-  }
-  <div>
-    <input /><input /><input />
-  </div>
-  {
-    //  13
-  }
-  <div>
-    <p>{str1}</p>
-    <p>{str2}</p>
-  </div>
-  {
-    //  14
-  }
-  <div>
-    name: {name} <br />
-    age: {age}
-  </div>
-  {
-    //  15
-  }
-  <div>
-    <ul>
-      <li>{arr[0]}</li>
-      <li>{arr[1]}</li>
-      <li>{arr[2]}</li>
-      <li>{arr[3]}</li>
-      <li>{arr[4]}</li>
-    </ul>
-  </div>
-  {
-    //  16
-  }
-  <div>
-    <p>
-      name: <span> {obj.name} </span> <br />
-      surname: <span> {obj.surname} </span>
-    </p>
-  </div>
-  {
-    //  17
-  }
-  <div id={attr}>
-    text
-  </div>
-  {
-    //  18
-  }
-  <div>
-    {str3}
-  </div>
-  {
-    //  19
-  }
-  <div>
-    <ul>
-      {li1}
-      {li2}
-      {li3}
-    </ul>
-  </div>
-  {
-    //  20
-  }
-  <div>
-    <ul>
-      {items}
-    </ul>
-  </div>
-  {
-    //  21
-  }
-  <div>
-  {
-    //Константы с тегами можно возвращать через return:
-    //function App() {
-    //	const str = <main>
-    //		text
-    //	</main>;
-    //	
-    //	return str;
-    //}
-  }
-  </div>
-  {
-    //  22
-  }
-  <div>
-    <input /> <br />
-    <input /> <br />
-    <input />
-  </div>
+    <div className='23.1'>
+      <ul>
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+        <li>text5</li>
+        <li>text6</li>
+        <li>text7</li>
+        <li>text8</li>
+        <li>text9</li>
+        <li>text10</li>
+      </ul>
+    </div>
+    <div className='23.2'>
+      <table border={1} height={100} width={100}>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div className='24.1'>
+      result: {num1 ** num2}
+    </div>
+    <div className='24.2'>
+      result: {name + ' ' + surname}
+    </div>
+    <div className='24.3'>
+      result: {Math.sqrt(num)}
+    </div>
+    <div className='25'>
+      {text1}
+    </div>
+    <div className='26'>
+      {age}
+    </div>
+    <div className='27'>
+      {p}
+    </div>
+    <div className='28'>
+      {abc}
+    </div>
+    <div className='29'>
+      {isAuth && <p>Вы авторизованы</p>}
+    </div>
+    <div className='30'>
+      {!isAuth1 && <p>Вы не авторизованы</p>}
+    </div>
+    <div className='31'>
+      {sum}
+    </div>
+    <div className='32'>
+      {getDigitSum1(12345)}
+    </div>
+    <div className='33'>
+      <button onClick={act1}>act1</button>
+      <button onClick={act2}>act2</button>
+    </div>
   </>
 }
-export default App; 
+export default App;
